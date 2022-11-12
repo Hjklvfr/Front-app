@@ -52,35 +52,40 @@ export default {
 
   methods: {
     onSubmit() {
-      if (this.height.trim() || this.weight.trim() || this.ppt.trim()
-          || this.sv.trim() || this.chss.trim() || this.dzla.trim()
-          || this.adsr.trim() || this.lasr.trim() || this.cvd.trim()
-          || this.kdo.trim()) {
-        const contractilityCalc = {
-          userId: 1,
-          height: this.height,
-          weight: this.weight,
-          ppt: this.ppt,
-          sv: this.sv,
-          chss: this.chss,
-          dzla: this.dzla,
-          adsr: this.adsr,
-          lasr: this.lasr,
-          cvd: this.cvd,
-          kdo: this.kdo,
-        }
-        this.$emit('contractility-Calc', contractilityCalc)
-        this.height = ''
-        this.weight = ''
-        this.ppt = ''
-        this.sv = ''
-        this.chss = ''
-        this.dzla = ''
-        this.adsr = ''
-        this.lasr = ''
-        this.cvd = ''
-        this.kdo = ''
+      this.height.trim();
+      this.weight.trim();
+      this.ppt.trim();
+      this.sv.trim();
+      this.chss.trim();
+      this.dzla.trim();
+      this.adsr.trim();
+      this.lasr.trim();
+      this.cvd.trim();
+      this.kdo.trim();
+      const contractilityCalc = {
+        userId: 1,
+        height: this.height,
+        weight: this.weight,
+        ppt: this.ppt,
+        sv: this.sv,
+        chss: this.chss,
+        dzla: this.dzla,
+        adsr: this.adsr,
+        lasr: this.lasr,
+        cvd: this.cvd,
+        kdo: this.kdo,
       }
+      this.$emit('contractility-Calc', contractilityCalc)
+      this.height = ''
+      this.weight = ''
+      this.ppt = ''
+      this.sv = ''
+      this.chss = ''
+      this.dzla = ''
+      this.adsr = ''
+      this.lasr = ''
+      this.cvd = ''
+      this.kdo = ''
     }
   }
 }

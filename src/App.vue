@@ -42,6 +42,10 @@ export default {
       };
       fetch("http://localhost:5000/calculator/calc/new", requestOptions)
           .then(response => response.json())
+          .then(response => {
+            console.log(response)
+            return response
+          })
           .then(data => (this.postId = data.id));
     }
   }
